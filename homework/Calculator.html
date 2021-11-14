@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지현ver.계산기</title>
+    <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            border-radius: 5px 5px 5px 5px;
+            border: none;
+        }
+        .display{
+            width: 500px;
+            /* height: 100px; */
+            background-color: #DDDDDD;
+            text-align: right;
+            font-size: 3em;
+            border-spacing: 5px;
+            border-radius: 5px 5px 0px 0px;
+        }
+        .display td{
+            background-color: #70C738;
+            height: 70px;
+            padding: 20px;
+            border-radius: 10px 10px 10px 10px;
+        }
+        .button{
+            width: 500px;
+            height: 400px;
+            background-color: #DDDDDD;
+            text-align: center;
+            border-spacing: 5px;
+            border-radius: 0px 0px 5px 5px;
+            
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        button:active{
+            background-color: #C6FF70;
+            color: #373737;
+        }
+        .button th{
+           width: 50%;
+        }
+        .button td{
+            height: 19%;
+        }
+        button{
+            text-align: center;
+            color: ghostwhite;
+            background-color: #373737;
+            width: 100%;
+            height: 100%;
+            font-size: 1.3em;
+            border-radius: 10px 10px 10px 10px;
+        }
+        #delete button{
+            background-color: #7B7B7B;
+            font-size: 1.5em;
+        }
+        .cal{
+            background-color: #FA960A;
+        }
+    </style>
+    <script>
+        var cal="";
+        function showDisplay(input){
+            cal += input;
+            document.getElementById("display").innerHTML = cal;
+        }
+        function backspace(){
+            cal = cal.substr(0,cal.length-1);
+            document.getElementById("display").innerHTML = cal;
+        }
+        function clearAll(){
+            cal = 0;
+            document.getElementById("display").innerHTML = cal;
+            cal = "";
+        }
+        function showResult(){
+            cal = eval(cal);
+            document.getElementById("display").innerHTML = cal;
+        }
+    </script>
+</head>
+<body>
+    <table class="display">
+        <tr>
+            <td id="display"> 
+                <!-- 클릭한 버튼의 값이 나타나야 함 -->
+            </td>
+        </tr>
+    </table>
+    <table class="button">
+        <tr id="delete">
+            <th colspan="2"><button type="button" onclick="backspace();">Backspace</button></th>
+            <th colspan="2"><button type="button" onclick="clearAll();">C</button></th>
+        </tr>
+        <tr id="firstLine">
+            <td><button type="button" onclick="showDisplay('1');">1</button></td>
+            <td><button type="button" onclick="showDisplay('2');">2</button></td>
+            <td><button type="button" onclick="showDisplay('3');">3</button></td>
+            <td><button type="button" class="cal" onclick="showDisplay('/');">/</button></td> 
+        </tr>
+        <tr id="secondLine">
+            <td><button type="button" onclick="showDisplay('4');">4</button></td>
+            <td><button type="button" onclick="showDisplay('5');">5</button></td>
+            <td><button type="button" onclick="showDisplay('6');">6</button></td>
+            <td><button type="button" class="cal" onclick="showDisplay('*');">×</button></td>
+        </tr>
+        <tr id="thirdLine">
+            <td><button type="button" onclick="showDisplay('7');">7</button></td>
+            <td><button type="button" onclick="showDisplay('8');">8</button></td>
+            <td><button type="button" onclick="showDisplay('9');">9</button></td>
+            <td><button type="button" class="cal" onclick="showDisplay('+');">+</button></td>
+        </tr>
+        <tr id="fourthLine">
+            <td><button type="button" onclick="showResult();">=</button></td>
+            <td><button type="button" onclick="showDisplay('0');">0</button></td>
+            <td><button type="button" onclick="showDisplay('.');">.</button></td>
+            <td><button type="button" class="cal" onclick="showDisplay('-');">-</button></td>
+        </tr>
+    </table>
+</body>
+</html>

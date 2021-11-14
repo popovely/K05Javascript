@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qu03.html</title>
+</head>
+<body>
+    <h1>*로 탑 만들기</h1>
+    <hr>
+    <script>
+        for(var i=1; i<=5; i++){
+            for(var j=1; j<=5; j++){
+                if(j<=i){
+                    document.write("* ");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>*로 역순으로 탑 만들기</h1>
+    <hr>
+    <script>
+        for(var i=1; i<=5; i++){
+            for(var j=1; j<=5; j++){
+                if(i<=j){
+                    document.write("* ");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <!-- T -->
+    <br><br><br><br>
+    <hr><hr>
+    <h2>Teacher</h2>
+    <h1>*로 탑 만들기</h1>
+    <hr>
+    <script>
+        for(var x=1; x<=5; x++){
+            for(var y=1; y<=x; y++){
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>*로 역순으로 탑 만들기1</h1>
+    <hr>
+    <script>
+        for(var x=1; x<=5; x++){
+            for(var y=1; y<=(5-x+1); y++){
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+    <h1>*로 역순으로 탑 만들기2</h1>
+    <hr>
+    <script>
+        for(var x=5; x>=1; x--){
+            for(var y=1; y<=x; y++){
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

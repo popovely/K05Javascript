@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지현ver.회원정보 수정</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 5px;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        fieldset{
+            width: 700px;
+        }
+        input{
+            border: 2px solid #E5E5E5;
+        }
+        .color_gray{
+            color: #5a5a5a;
+        }
+        .bold_red{
+            color: red; font-weight: bold;
+            margin-left: 50px;
+        }
+        .pNum{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <p style="padding: 20px;"></p>
+    <input type="radio" name="find_id" class="color_gray">아이디 찾기
+    <input type="radio" name="find_pw" class="color_gray">비밀번호 찾기
+    <fieldset style="border: 5px solid #8c8c8c;">
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <span class="bold_red">></span>
+                        <span class="color_gray">이름(대표자명)</span>
+                    </td>
+                    <td>
+                        <input type="text" name="user_name" size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="bold_red">></span>
+                        <select name="phoneNum">
+                            <option value="p_number" selected>휴대전화</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="pNum1" size="3" class="pNum"> -
+                        <input type="text" name="pNum1" size="4" class="pNum"> -
+                        <input type="text" name="pNum1" size="4" class="pNum">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div style="text-align: center; color: #b4b4b4; padding-bottom: 40px;">.........................................................................</div>
+        <div style="text-align: center; padding-bottom: 30px; font-weight: normal;"
+            class="color_gray">
+            아이디를 찾기 위해서 이름과 휴대번호 혹은 이메일을 입력하세요.</div>
+    </fieldset>
+
+    <p style="padding: 20px;"></p>
+
+
+
+    <input type="radio" name="find_id" class="color_gray">아이디 찾기
+    <input type="radio" name="find_pw" class="color_gray">비밀번호 찾기
+    <fieldset style="border: 5px solid #8c8c8c;">
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <span class="bold_red">></span>
+                        <span class="color_gray">아이디</span>
+                    </td>
+                    <td>
+                        <input type="text" name="user_name" size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="bold_red">></span>
+                        <span class="color_gray">이름(대표자명)</span>
+                    </td>
+                    <td>
+                        <input type="text" name="user_name" size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="bold_red">></span>
+                        <select name="phoneNum">
+                            <option value="email" selected>이메일</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="email1" size="10" class="pNum"><span class="color_gray">@</span>
+                        <input type="text" name="email2" size="12" class="pNum">
+                        <select name="phoneNum">
+                            <option value="email" selected>직접입력</option>
+                            <option value="gmail">gmail.com</option>
+                            <option value="gmail">daum.net</option>
+                            <option value="gmail">naver.com</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div style="text-align: center; color: #b4b4b4; padding-bottom: 40px;">.........................................................................</div>
+        <div style="text-align: center; padding-bottom: 30px; font-weight: normal;"
+            class="color_gray">
+            비밀번호를 찾기 위해서 아이디, 이름과 휴대번호 혹은 이메일을 입력하세요.</div>
+    </fieldset>
+</body>
+</html>

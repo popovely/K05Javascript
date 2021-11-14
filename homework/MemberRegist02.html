@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style type="text/css">
+        span {color: red;}
+        td {border:1px solid lightgray;}
+		input {border:1px solid lightgray;}
+    </style>    
+</head>
+<body>
+    <table style="width:1000px; border:1px solid lightgray"
+        cellspacing="0" cellpadding=10>
+        <colgroup>
+            <col width="300px">
+            <col width="800px">
+        </colgroup>
+		<tr>
+			<td colspan="3" style="text-align: right;"><span>*</span> 필수입력</td>			
+		</tr>
+		<tr>
+			<td style="background-color:#E8F5FF;"><span>*</span><strong> 아이디</strong></td>
+			<td style="color: gray;">
+				<input type="text">
+				<input type="button" value="중복확인" style="background-color: rgb(51, 50, 50); color: white;">
+				&nbsp;&nbsp;&nbsp;+ 4~15자, 첫 영문자, 영문자와 숫자 조합
+			</td>
+		</tr>
+		<tr style="background-color:white;">
+			<td style="background-color:#E8F5FF;"><span>*</span><strong> 비밀번호</strong></td>
+			<td>
+				<input type="text">
+			</td>
+		</tr>
+		<tr style="background-color:white;">
+			<td style="background-color:#E8F5FF;"><span>*</span><strong> 비밀번호 확인</strong></td>
+			<td style="color: gray;">
+				<input type="text">
+				&nbsp;&nbsp;&nbsp;(확인을 위해 다시 입력해 주세요.)
+			</td>
+		</tr>
+		<tr style="background-color:white;">
+			<td style="background-color:#E8F5FF;"><span>*</span><strong> 이름</strong></td>
+			<td>
+				<input type="text">
+			</td>
+		</tr>
+		<tr style="background-color:white;">
+			<td style="background-color:#E8F5FF;"><strong>&nbsp;&nbsp;생년월일</strong></td>
+			<td>
+				<input type="radio" name="gender" value="M" checked>남자
+           		&nbsp;&nbsp;
+            	<input type="radio" name="gender" value="W">여자
+				&nbsp;&nbsp;
+				<input type="text" size="4">년
+				<input type="text" size="2">월
+				<input type="text" size="2">일
+				&nbsp;&nbsp;&nbsp;(예, 2000년 01월 31일)
+			</td>
+		</tr>
+		<tr style="background-color:white;">
+			<td style="background-color:#E8F5FF;" rowspan="2"><span>*</span><strong> 이메일</strong></td>
+			<td>
+				<input type="text">@
+				<input type="text" value="gmail.com">
+				<select name="interest">
+					<option selected> gmail.com </option>
+					<option>hanmail.net</option>
+					<option>naver.com</option>
+				</select>
+				<input type="radio" name="receive" value="A" checked>수신허용
+           		&nbsp;
+            	<input type="radio" name="receive" value="D">수신불가
+				&nbsp;&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td style="color: gray;">
+				※ hanmail.net은 메일 수신이 어려울 수 있으니 가급적 다른 메일을
+			이용하시기 바랍니다.
+			</td>
+		</tr>
+		<tr>
+			<td style="background-color:#E8F5FF;" rowspan="3"><strong>&nbsp;&nbsp;주소</strong></td>
+			<td>
+				<input type="button" value="주소찾기" style="background-color: rgb(51, 50, 50); color: white;">
+				&nbsp;
+				<input type="text"> (우편번호)
+			</td>
+		</tr>
+        <tr>
+            <td><input type="text" size="120"></td>
+        </tr>
+        <tr>
+            <td>
+				<input type="text" size="100">
+				&nbsp;&nbsp;
+				+ 나머지 주소</td>
+        </tr>
+        <tr>
+            <td style="background-color:#E8F5FF;"><strong>&nbsp;&nbsp;전화번호</strong></td>
+			<td>
+				<input type="text" size="3"> - 
+				<input type="text" size="4"> - 
+				<input type="text" size="4">
+			</td>
+        </tr>
+        <tr>
+            <td style="background-color:#E8F5FF;"><span>*</span><strong> 휴대전화</strong></td>
+			<td>
+				<input type="text" size="3"> - 
+				<input type="text" size="4"> - 
+				<input type="text" size="4">
+			</td>
+        </tr>
+        <tr>
+            <td style="background-color:#E8F5FF;"><span>*</span><strong> 관심분야</strong></td>
+			<td>
+				<select name="interest">
+					<option selected>
+						 :: 관심분야 선택 ::
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</option>
+					<option>음악감상</option>
+					<option>독서</option>
+					<option>여행</option>
+				</select>
+			</td>
+        </tr>
+        <tr>
+            <td style="background-color:#E8F5FF;"><span>*</span><strong> 가입경로</strong></td>
+			<td>
+				<select name="regiPath">
+					<option selected>
+						 :: 가입경로 선택 ::
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</option>
+					<option>인터넷 검색</option>
+					<option>광고</option>
+					<option>지인추천</option>
+				</select>
+			</td>
+        </tr>
+		
+	</table>
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<!-- 테이블 따로 만들어서 합쳐버리고 그 안에 버튼 넣기 -->
+		<input type="button" value="등록하기" cellpadding="10" style="font-size: 20px; background-color: red; color: white;">
+		&nbsp;
+		<input type="button" value="새로 쓰기" style="font-size: 20px; background-color: rgb(51, 50, 50); color: white;">
+</body>
+</html>

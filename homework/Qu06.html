@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qu06.html</title>
+</head>
+<body>
+
+
+    <!-- T -->
+    <br><br><br><br>
+    <hr><hr>
+    <h2>Teacher</h2>
+    <h1>암호를 입력하세요</h1>
+    <hr>
+    <script>
+        // 무조건 한번은 실행해야 하므로 do~while문이 적절하다.
+        do{
+            var pwd = prompt("암호를 입력하세요");
+            if(pwd=='kosmo'){
+                break;  //암호가 일치하면 루프 탈출
+            }
+            else{
+                alert("암호가 틀렸습니다.");
+            }
+        } while(1);
+        /*
+        JS는 0, null, false만 false로 처리하므로
+        무한루프 조건을 위해 위와같이 1을 써도 무방하다.
+        */
+       document.write("암호가 일치합니다.");
+    </script>
+</body>
+</html>
