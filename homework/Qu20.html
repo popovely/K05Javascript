@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qu20.html</title>
+    <script>
+        window.onblur = function(){
+            document.getElementsByTagName("div")[0].style.backgroundColor = "white";
+        }
+        window.onfocus = function(){
+            document.getElementsByTagName("div")[0].style.backgroundColor = "gray";
+        }
+    </script>
+</head>
+<body>
+    <div style="border: solid 2px black; width: 300px;">
+        <h2>포커스와 onblur, onfocus</h2>
+        <hr>
+        브라우저 바깥에 마우스를 클릭하면 window 객체에 blur 이벤트가 발생하고
+        다시 마우스를 클릭하면 window 객체에 focus 이벤트가 발생한다.
+    </div>
+</body>
+</html>

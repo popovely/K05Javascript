@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qu14.html</title>
-    <style>
+    <!--------------------------------------------------------- ME -->
+    <!-- <style>
         div{
             text-align: center;
             float: left;
@@ -13,10 +14,49 @@
             width: 100px;
             height: 50px;
         }
+    </style> -->
+
+
+    <!--------------------------------------------------------- T -->
+    <style>
+        /*
+        float : left;
+            => div와 같은 블럭엘리먼트를 가로형으로 배치한다.
+
+        height: 80px; line-height: 80px;
+            => 두 속성의 크기를 동일하게 설정하면
+               블럭엘리먼트에서 수직방향으로 가운데정렬이 된다.
+        */
+        div{
+            width: 150px; height: 80px; padding-left: 10px;
+            float: left; line-height: 80px;
+            font-size: 1.5em; font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <h1>17개의 CSS3 색이름과 색</h1>
+    <!-- T -->
+    <h2>18개의 div를 해당색으로 표현하기</h2>
+    <hr>
+    <!-- 모양 확인용 -->
+    <!-- <div style="background-color: maroon;">maroon</div>
+    <div style="background-color: red;">red</div> -->
+
+    <script>
+        var colorNames = ["maroon", "red", "orange", "yellow", "olive",
+                    "purple", "fuchsia", "white", "lime", "green",
+                    "navy", "blue", "aqua", "teal", "black",
+                    "silver", "gray", "lightskyblue"];
+        var str = '';
+        for(var i=0; i<colorNames.length; i++){
+            str += '<div style="background-color: '+ colorNames[i] +';">'+ colorNames[i] +'</div>';
+        }
+        document.write(str);
+    </script>
+
+
+    <!--------------------------------------------------------- ME -->
+    <!-- <h1>17개의 CSS3 색이름과 색</h1>
     <hr>
     <div class="div"></div>
     <div class="div"></div>
@@ -49,6 +89,6 @@
             arrDiv[i].innerHTML = colorNames[i];
             arrDiv[i].style.backgroundColor = colorNames[i];
         }
-    </script>
+    </script> -->
 </body>
 </html>

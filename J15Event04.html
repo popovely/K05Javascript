@@ -74,7 +74,7 @@
                     */
                 }
                 else{
-                    obj.options[i].text = "==========";
+                    // obj.options[i].text = "==========";
                 }
             }
         }
@@ -94,7 +94,8 @@
     <script>
         function fnSubmit(){
             // form태그 하위의 텍스트 상자의 DOM을 얻어온다.
-            var txtObj = document.subForm.txt;
+            var txtObj = document.subForm.txt;                 //방법1] 텍스트상자의 name속성으로 접근
+            // var txtObj = document.getElementById("idTxt");  //방법2] 텍스트상자의 id속성으로 접근
             /*
             텍스트 상자에 아무런 내용이 없는경우
             서버로 전송되지 않도록 false를 반환한다.
