@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qu20.html</title>
+    <!------------------------------------------------ ME -->
+<!-- 
+    <style>
+        div{ border: solid 2px black; width: 300px; }
+    </style>
     <script>
         window.onblur = function(){
             document.getElementsByTagName("div")[0].style.backgroundColor = "white";
@@ -13,13 +18,49 @@
             document.getElementsByTagName("div")[0].style.backgroundColor = "gray";
         }
     </script>
+-->
+
+
+    <!------------------------------------------------ T -->
+    <script>
+        // 전역변수
+        var allWrap;
+        // 반드시 문서의 로드가 끝난 이후 DOM을 얻어와야 한다.
+        window.onload = function(){
+            allWrap = document.getElementById("AllWrap");
+        }
+        window.onfocus = function(){
+            allWrap.style.backgroundColor = "white";
+            // 창을 잡는순간 포커스가 이동된다.
+            document.frm.user_id.focus();
+        }
+        window.onblur = function(){
+            allWrap.style.backgroundColor = "gray";
+        }
+    </script>
 </head>
+<body id="AllWrap">
+    <h2>focus와 blur이벤트</h2>
+    <hr>
+    <p>
+        브라우저 안쪽을 클릭하면 흰색배경,
+        바깥쪽을 클릭하면 회색배경이 되도록 JS코드를 작성하시오.
+    </p>
+    <form name="frm">
+        아이디 : <input type="text" name="user_id" size="20">
+    </form>
+</body>
+
+
+    <!------------------------------------------------ ME -->
+<!-- 
 <body>
-    <div style="border: solid 2px black; width: 300px;">
+    <div>
         <h2>포커스와 onblur, onfocus</h2>
         <hr>
         브라우저 바깥에 마우스를 클릭하면 window 객체에 blur 이벤트가 발생하고
         다시 마우스를 클릭하면 window 객체에 focus 이벤트가 발생한다.
     </div>
 </body>
+ -->
 </html>

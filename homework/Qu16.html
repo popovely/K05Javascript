@@ -5,19 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qu16.html</title>
-    <script>
+    <!------------------------------------------------ ME -->
+    <!-- <script>
         function dottedStyle(){
             document.getElementById("mySpan").style.border = "2px dotted violet";
         }
         function doubleStyle(){
             document.getElementById("myPara").style.border = "3px double gray";
         }
+    </script> -->
+
+    <!------------------------------------------------- T -->
+    <script>
+        function setBorder(){
+            var mSpan = document.getElementById("mySpan");
+            mSpan.style.border = "2px dotted violet";
+        }
+        var setParagraph = function(){
+            //border속성으로 두께,스타일,색을 한번에 지정
+            // document.getElementById("myPara").style.border = "3px double gray";
+
+            // 아래와 같이 border의 개별속성을 통해서 따로 적용가능
+            document.getElementById("myPara").style.borderColor = 'gray';
+            document.getElementById("myPara").style.borderStyle = 'double';
+            document.getElementById("myPara").style.borderWidth = '3px';
+        }
     </script>
 </head>
 <body>
-    <span style="font-weight: bold;">자바스크립트란?</span>
+    자바스크립트란?
+    <button onclick="setBorder();">border</button>
+    <input type="button" value="p" onclick="setParagraph();">
+
+    <!------------------------------------------------ ME -->
+    <!-- <span style="font-weight: bold;">자바스크립트란?</span>
     <input type="button" value="border" onclick="dottedStyle();">
-    <input type="button" value="p" onclick="doubleStyle();">
+    <input type="button" value="p" onclick="doubleStyle();"> -->
     <hr>
     <p id="myPara">자바스크립트는 웹 프로그래밍 언어로서 웹 페이지를 동적 변경시킬 수 있다.</p>
     <p><span id="mySpan">C 언어</span>를 아는 사용자는 빠르게 학습할 수 있다.</p>
