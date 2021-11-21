@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업다운게임</title>
+    <script>
+        // 시도횟수 (총 7회)
+        var count = 0;
+        // 정답
+        var answer;
+
+        window.onload = function () {
+            answer = parseInt(Math.random() * 100) + 1;
+            alert("정답 : "+ answer);
+            document.getElementById("inputNum").focus();
+        }
+
+        function AnsCheck() {
+            var num = document.getElementById("inputNum").value;
+            var focus = document.getElementById("inputNum").focus();
+            var showCount = document.getElementById("showCount");
+            var img = document.getElementById("img");
+            // 입력값 범위체크
+            if( !(num>=1 && num<=100) ){
+                img.src = "../images/error.jpg";
+                alert("1~100 사이의 정수를 입력해주세요");
+                num = '';
+                focus;
+                return;
+            }
+            // 업다운 진행
+            if(num > answer){
+                img.src = "../images/down.jpg";
+                showCount.innerHTML = count++;
+                num = '';
+                focus;
+            }
+            else if(num < answer){
+                img.src = "../images/up.jpg";
+                showCount.innerHTML = count++;
+                num = '';
+                focus;
+            }
+            else{
+                img.src = "../images/answer.jpeg";
+                document.getElementById("refresh").style.visibility = "visible";
+            }
+            // 시도횟수 체크
+            if(count > 8){
+                alert("시도횟수가 초과하였습니다. 게임을 재시작합니다.");
+                location.reload();
+            }
+        }
+        // 정답맞추면 새로고침 가능 ㅡ 왜 안되는건지 설명좀 해주실분
+        // function refresh() {
+        //     location.reload();
+        // }
+    </script>
+</head>
+<body>
+    <h1>업다운게임</h1>
+    <h2>1~100사이의 숫자를 입력하세요</h2>
+    <br>
+    <h3>시도횟수 : <span style="font-size: 2em;" id="showCount">0</span>회</h3>
+    <form action="">
+        <div>숫자입력 : 
+            <input type="text" size="3" name="inputNum" id="inputNum">
+            <input type="button" value="확인" onclick="AnsCheck();">
+            <input type="button" value="새로고침" style="visibility: hidden;" id="refresh" onclick="location.reload();">
+        </div>
+    </form> 
+    <img src="../images/updowngame.jpg" alt="업다운게임" id="img">
+</body>
+</html>
