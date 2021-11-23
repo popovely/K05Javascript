@@ -45,7 +45,8 @@
             }
             else{
                 img.src = "../images/answer.jpeg";
-                document.getElementById("refresh").style.visibility = "visible";
+                document.getElementById("refresh").style.visibility = "visible";    //방법1
+                // document.getElementById("refresh").style.display = "inline";     //방법2
             }
             // 시도횟수 체크
             if(count > 8){
@@ -68,7 +69,8 @@
         <div>숫자입력 : 
             <input type="text" size="3" name="inputNum" id="inputNum">
             <input type="button" value="확인" onclick="AnsCheck();">
-            <input type="button" value="새로고침" style="visibility: hidden;" id="refresh" onclick="location.reload();">
+            <input type="button" value="새로고침" style="visibility: hidden;" id="refresh" onclick="location.reload();"><!-- 방법1
+            <input type="button" value="새로고침" style="display: none;" id="refresh" onclick="location.reload();">          방법2 -->
         </div>
     </form> 
     <img src="../images/updowngame.jpg" alt="업다운게임" id="img">
