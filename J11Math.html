@@ -25,6 +25,7 @@
         document.write("최소값:"+ Math.min(1, 10, -100, -10, 1000, 0));
         document.write("최대값:"+ Math.max(1, 10, -100, -10, 1000, 0));
 
+        // 버블정렬 (오름차순)
         var bubbleSort = function (arr) {
             for(var i=0; i<arr.length-1; i++) {
                 for(var j=0; j<(arr.length-1)-i; j++) {
@@ -37,7 +38,7 @@
 		    }   
         }
 
-        //로또번호 생성하기
+        // 로또번호 생성하기
         function  getLotto() {
             //로또번호를 저장할 배열생성. 초기값은 0으로 설정.
             var lottoNum = [0,0,0,0,0,0];
@@ -84,8 +85,8 @@
             var lottoStr = "";
             //생성된 로또번호를 웹브라우저에 출력하기
             for(var i=0; i<lottoNum.length; i++){
-                    //로또번호를 하나의 문자열로 연결
-                    lottoStr += lottoNum[i] +"&nbsp;";
+                //로또번호를 하나의 문자열로 연결
+                lottoStr += lottoNum[i] +"&nbsp;";
             }
             document.getElementById("lottoNumber").innerHTML = lottoStr;
         }

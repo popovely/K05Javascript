@@ -141,14 +141,15 @@
         xxx@yyy.co.kr 이라면 yyy만 출력되어야 한다.
         */
         var emailArray = ["kim@naver.com", "sung@hanmail.net", "park@ikosmo.co.kr"];
-        var getDomainStr = function(emailArr){
-            //내가 짠 코드............흐아앙
-            // emailArr = emailArray.split("@");
-            // emailArr = emailArr[1].split(".");
-            // for(var i=0; i<=emailArray.length; i++){
-            //     document.write(emailArr[0]);
-            // }
-            // - 작전을 잘 짜야됨................그림....그려라
+        
+//      내가 짠 코드............흐아앙
+//      var getDomainStr = function(emailArr){
+//          emailArr = emailArray.split("@");
+//          emailArr = emailArr[1].split(".");
+//          for(var i=0; i<=emailArray.length; i++){
+//              document.write(emailArr[0]);
+//          }
+//          - 작전을 잘 짜야됨................그림....그려라
 
             // T
             var getDomainStr = function(emailArr){
@@ -176,7 +177,7 @@
                     document.write("결과2:"+ secondArr[0] +"<br>");
                 }
             }
-        }
+//      }
         document.write("<h2>연습문제>도메인 추출하기</h2>");
         getDomainStr(emailArray);   
     </script>
