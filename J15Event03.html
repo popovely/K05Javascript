@@ -10,11 +10,13 @@
         window.addEventListener("load", function(){
             // 함수를 이용하므로 on을 제외한 이벤트명만 기술하면 된다.
             alert("Load 이벤트 활용3. 문서의 로딩 완료됨..!!");
+            console.log("Load이벤트 실행")
         })
 
         function myFunc(){
             var mydiv = document.getElementById("mydiv").innerHTML;
             alert("mydiv의 내용: "+ mydiv);
+            console.log("myFunc() 함수실행")
         }
     </script>
 </head>
@@ -26,5 +28,8 @@
     <div id="mydiv" onclick="myFunc();" style="cursor: pointer;">
         여기는 div영역입니다.
     </div>
+    <script>
+        console.log("div영역 보여줌")
+    </script>
 </body>
 </html>
